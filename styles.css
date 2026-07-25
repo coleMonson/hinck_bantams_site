@@ -159,9 +159,7 @@
     .brand-word{ display: none; }
   }
 
-  /* ============================================
-     HERO
-     ============================================ */
+  /* hero / main */
   .hero{
     position:relative;
     padding:calc(var(--header-h) + 60px) 32px 32px;
@@ -196,9 +194,7 @@
     font-style:italic;
   }
 
-  /* ============================================
-     MISSION STRIP — barrel hoops
-     ============================================ */
+  /* mission */
   .barrel{
     position:relative;
     background-color: #7c5d3a;
@@ -228,9 +224,7 @@
     text-shadow:1px 1px 0 rgba(0,0,0,.35);
   }
 
-  /* ============================================
-     SECTIONS shared
-     ============================================ */
+  /* sections - shared */
   section{ position:relative; z-index:1; }
   .section-head{ text-align:center; max-width:640px; margin:0 auto 3rem; }
   .section-head h2{ font-size:clamp(2rem,4vw,2.7rem); }
@@ -239,9 +233,7 @@
   .flock{ background:var(--canvas-light); border-top:var(--edge); border-bottom:var(--edge); }
   .keeper { padding-top: 30px; }
 
-  /* ============================================
-     TAG CARD — hangs like a leg-band / dossier tag
-     ============================================ */
+  /* cards */
   .tag-card{
     position:relative;
     background:var(--canvas-light);
@@ -305,9 +297,7 @@
     margin-top: 40px;
   }
 
-  /* ============================================
-     FLOCK — three hanging tags on a line
-     ============================================ */
+  /* three tags */
   .flock-line{
     max-width:920px; margin:0 auto 3.6rem;
     border-top:1px solid rgba(33,30,25,.25);
@@ -353,9 +343,7 @@
     .flock-row{ grid-template-columns:1fr; padding-bottom: 44px; }
   }
 
-  /* ============================================
-     CONTACT / FOOTER
-     ============================================ */
+  /* contact / footer */
   .contact{
     padding:5.5rem 32px 5.5rem;
     text-align:center;
