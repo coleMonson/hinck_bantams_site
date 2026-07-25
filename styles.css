@@ -155,6 +155,10 @@
     .site-header.is-scrolled .brand-word{ display:none; }
   }
 
+  @media (max-width:620px){
+    .brand-word{ display: none; }
+  }
+
   /* ============================================
      HERO
      ============================================ */
