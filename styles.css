@@ -331,57 +331,20 @@
     margin-top: 40px;
   }
 
-  @media (max-width:760px){
-    .keeper-wrap{ grid-template-columns:1fr; }
-    .keeper-photo{ border-right:1px solid rgba(33,30,25,.18); border-bottom:none; aspect-ratio:4/3; }
-    .keeper-photo img{ aspect-ratio:4/3; }
-  }
-
-  /* ============================================
-     PROGRAM PHOTO — framed feature photo + caption,
-     sits above the flock cards
-     ============================================ */
-  .program-photo{
-    position:relative;
-    width:100%;
-    margin:0;
-    padding:14px;
-    background:var(--canvas-light);
-    border:1px solid rgba(33,30,25,.18);
-    box-shadow:0 10px 26px rgba(33,30,25,.10);
-  }
-  .program-photo img{
-    width:100%; height:auto; display:block;
-    filter:sepia(.28) saturate(.75) contrast(1.03);
-    border:1px solid rgba(33,30,25,.25);
-  }
-  .program-photo .corner{
-    position:absolute; width:9px; height:9px;
-    border-color:var(--brass); border-style:solid; opacity:.9;
-    z-index:1;
-  }
-  .program-photo .corner.tl{ top:6px; left:6px; border-width:2px 0 0 2px; }
-  .program-photo .corner.br{ bottom:6px; right:6px; border-width:0 2px 2px 0; }
-  .program-photo figcaption{
-    margin-top:1rem;
-    text-align:center;
-    font-family:var(--font-body);
-    font-style:italic;
-    font-size:1rem;
-    color:rgba(33,30,25,.75);
-  }
-
   /* ============================================
      FLOCK — three hanging tags on a line
      ============================================ */
-  .flock-wrap{
-    max-width:920px; margin:0 auto;
-    display:grid; grid-template-columns:340px 1fr;
-    gap:44px;
-    align-items:start;
+  .flock-line{
+    max-width:920px; margin:0 auto 3.6rem;
+    border-top:1px solid rgba(33,30,25,.25);
+    position:relative;
   }
   .flock-row{
-    display:flex; flex-direction:column; gap:28px;
+    max-width:920px; margin:0 auto;
+    display:grid; grid-template-columns:repeat(1,1fr); gap:44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .flock-card{ padding:2.2rem 1.6rem 1.8rem; text-align:center; }
   .flock-card .icon-badge{
@@ -395,11 +358,25 @@
   .flock-card h3{ font-size:1.25rem; margin-bottom:.6rem; font-family:var(--font-stamp); letter-spacing:.02em; text-transform:uppercase; font-size:1rem; }
   .flock-card p{ font-size:.95rem; color:rgba(33,30,25,.78); margin:0; }
 
-  .flock img { scale: 0.7; }
+  .flock-row img { scale: 0.7; }
+
+  .flock-wrap {
+    max-width:920px; margin:0 auto;
+    display:grid; grid-template-columns: 400px 1fr;
+    gap: 44px;
+  }
+
+  .flock-wrap .keeper-photo {
+    box-shadow:0 10px 26px rgba(33,30,25,.10);
+    border: 1px solid rgba(33, 30, 25, .18);
+  }
 
   @media (max-width:760px){
-    .flock-wrap{ grid-template-columns:1fr; }
-    .flock-row{ gap:44px; }
+    .keeper-wrap{ grid-template-columns:1fr; }
+    .keeper-photo{ border-right:1px solid rgba(33,30,25,.18); border-bottom:none; aspect-ratio:4/3; }
+    .keeper-photo img{ aspect-ratio:4/3; }
+    .flock-wrap{ grid-template-columns:1fr; gap: 0px;}
+    .flock-row{ grid-template-columns:1fr; padding-bottom: 44px; }
   }
 
   /* ============================================
