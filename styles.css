@@ -115,7 +115,7 @@
     display:flex; align-items:center; gap:28px;
   }
 
-  .brand{ display:flex; align-items:center; gap:14px; margin-right:auto; }
+  .brand{ display:flex; align-items:center; gap:18px; margin-right:auto; }
   .brand-mark{
     height:56px; width:auto;
     filter:invert(1) brightness(1.7);
@@ -230,7 +230,7 @@
   .section-head h2{ font-size:clamp(2rem,4vw,2.7rem); }
 
   .keeper, .flock{ padding:6.5rem 32px; }
-  .flock{ background:var(--canvas-light); border-top:var(--edge); border-bottom:var(--edge); }
+  .flock{ border-top:var(--edge); border-bottom:var(--edge); }
   .keeper { padding-top: 30px; }
 
   /* cards */
@@ -322,25 +322,24 @@
   .flock-card h3{ font-size:1.25rem; margin-bottom:.6rem; font-family:var(--font-stamp); letter-spacing:.02em; text-transform:uppercase; font-size:1rem; }
   .flock-card p{ font-size:.95rem; color:rgba(33,30,25,.78); margin:0; }
 
-  .flock-row img { scale: 0.7; }
-
-  .flock-wrap {
-    max-width:920px; margin:0 auto;
-    display:grid; grid-template-columns: 400px 1fr;
-    gap: 44px;
+  .flock .keeper-wrap {
+    grid-template-columns: 1fr 340px;
   }
-
-  .flock-wrap .keeper-photo {
-    box-shadow:0 10px 26px rgba(33,30,25,.10);
-    border: 1px solid rgba(33, 30, 25, .18);
+  .flock .keeper-photo {
+    border-right: 1px;
+    border:1px solid rgba(33,30,25,.18);
+    border-left: none;
   }
 
   @media (max-width:760px){
     .keeper-wrap{ grid-template-columns:1fr; }
+    .flock .keeper-wrap{ grid-template-columns:1fr; }
+    .flock .keeper-photo {
+      border:1px solid rgba(33,30,25,.18);
+      border-top: none;
+    }
     .keeper-photo{ border-right:1px solid rgba(33,30,25,.18); border-bottom:none; aspect-ratio:4/3; }
     .keeper-photo img{ aspect-ratio:4/3; }
-    .flock-wrap{ grid-template-columns:1fr; gap: 0px;}
-    .flock-row{ grid-template-columns:1fr; padding-bottom: 44px; }
   }
 
   /* contact / footer */
