@@ -284,6 +284,7 @@
   .keeper-role{
     font-family:var(--font-stamp); font-size:.78rem; letter-spacing:.12em;
     text-transform:uppercase; color:var(--olive); margin-bottom:1.1rem;
+    margin-top: 0.4rem;
   }
   .keeper-body p{ color:rgba(33,30,25,.85); }
   .keeper-note{
@@ -330,6 +331,8 @@
     border:1px solid rgba(33,30,25,.18);
     border-left: none;
   }
+
+  .keeper-body h2 { line-height: 1.4; }
 
   @media (max-width:760px){
     .keeper-wrap{ grid-template-columns:1fr; }
